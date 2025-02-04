@@ -108,6 +108,7 @@ h2::selection {
   margin: 0 auto;
   max-width: 700px;
 }
+
 /* Projects */
 #projects {
   display: flex;
@@ -243,7 +244,7 @@ textarea:focus {
   
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/projects/SupermarketCashier.jpg) center center/cover;
+  background: url(../assets/projects/Loan.png) center center/cover;
 }
   
 /* Project 2 */
@@ -260,26 +261,48 @@ textarea:focus {
 .card:nth-child(4) {
   background: url(../assets/projects/AppointmentSystem.jpg) center center/cover;
 }
-  
+    
 /* Project 5 */
 .card:nth-child(5) {
-  background: url(../assets/projects/CofeeBlog.jpg) center center/cover;
+  background: url(../assets/projects/SupermarketCashier.jpg) center center/cover;
 }
-  
+
 /* Project 6 */
 .card:nth-child(6) {
-  background: url(../assets/project/project-six.png) center center/cover;
+  background: url(../assets/projects/CofeeBlog.jpg) center center/cover;
 }
   
 /* Media Queries */
 @media (max-width: 768px) {
-.header-container {
-  margin-top: 7rem;
-  text-align: center;
-}
-  
-.content-text h2 {
-  font-size: 2.5rem;
+  .header-container {
+    margin-top: 7rem;
+    text-align: center;
+  }
+  .project {
+    min-height: 800px;
+  }
+  .content-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+  }
+
+  .card {
+    min-width: 350px;
+    min-height: 150px;
+  }
+
+  .project-bio {
+    top: 170px;
+  }
+
+  .card .project-bio h3 {
+    font-size: 1.2rem;
   }
 }
 
@@ -295,6 +318,38 @@ textarea:focus {
   }
 
   button[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    min-height: 150px;
+  }
+
+  .project-bio {
+    top: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    min-height: 150px;
+  }
+
+  .project-bio {
+    top: 80px;
+  }
+
+  .card .project-bio h3 {
     font-size: 0.9rem;
   }
 }
